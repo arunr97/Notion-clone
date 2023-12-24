@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1703404604958,
+      "tag": "0000_soft_gertrude_yorkes",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1703405751084,
+      "tag": "0001_silky_mongu",
+      "breakpoints": true
+    }
+  ]
+}
