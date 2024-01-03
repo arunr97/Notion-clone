@@ -6,8 +6,8 @@ import Banner from '../../../public/appBanner.png';
 
 const HomePage = () => {
   return (
-    <section>
-      <div
+    <>
+      <section
         className=' overflow-hidden 
         px-4
         sm:px-6
@@ -44,9 +44,9 @@ const HomePage = () => {
             Get Cypress Free
           </Button>
         </div>
-      </div>
-      <div
-        className='md:mt-[-90px]
+
+        <div
+          className='md:mt-[-110px]
       sm:w-full
       w-[750px]
       flex
@@ -56,10 +56,53 @@ const HomePage = () => {
       relative
       sm:ml-0
       ml-[-50px]'
-      >
-        <Image src={Banner} alt='Application Banner' />
-      </div>
-    </section>
+        >
+          <Image src={Banner} alt='Application Banner' />
+
+          <div
+            className='bottom-0
+      top-[50%]
+      bg-gradient-to-t
+      dark:from-background
+      left-0
+      right-0
+      absolute
+      z-10'
+          ></div>
+        </div>
+      </section>
+      <section className='relative'>
+        <div
+          className='overflow-hidden
+        flex
+        absolute
+        after:content[""]
+        after:dark:from-brand-dark
+        after:to-transparent
+        after:from-background
+        after:bg-gradient-to-l
+        after:right-0
+        after:bottom-0
+        after:top-0
+        after:w-20
+        after:z-10
+        after:absolute
+
+        before:content[""]
+        before:dark:from-brand-dark
+        before:to-transparent
+        before:from-background
+        before:bg-gradient-to-r
+        before:left-0
+        before:top-0
+        before:bottom-0
+        before:w-20     
+        before:z-10
+        before:absolute
+        '
+        ></div>
+      </section>
+    </>
   );
 };
 
