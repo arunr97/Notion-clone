@@ -3,6 +3,8 @@ import TitleSection from '@/components/landing-page/title-section';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Banner from '../../../public/appBanner.png';
+import Calendar from '../../../public/cal.png';
+import { CLIENTS } from '@/lib/constants';
 
 const HomePage = () => {
   return (
@@ -75,7 +77,6 @@ const HomePage = () => {
         <div
           className='overflow-hidden
         flex
-        absolute
         after:content[""]
         after:dark:from-brand-dark
         after:to-transparent
@@ -100,7 +101,65 @@ const HomePage = () => {
         before:z-10
         before:absolute
         '
+        >
+          {[...Array(2)].map((arr) => (
+            <div key={arr} className='flex flex-nowrap animate-slide'>
+              {CLIENTS.map((client) => (
+                <div
+                  key={client.alt}
+                  className='relative w-[200px] m-20 shrink-0 flex items-center'
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.alt}
+                    width={200}
+                    className='object-contain max-w-none'
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+      <section
+        className='px-4
+      sm:px-6
+      flex
+      justify-center
+      items-center
+      flex-col
+      relative'
+      >
+        <div
+          className='w-[30%]
+        blur-[120px]
+        rounded-full
+        h-32
+        absolute
+        bg-brand-primaryPurple/50
+        -z-10
+        top-22'
         ></div>
+        <TitleSection
+          title='Keep Track of your meetings all in one place'
+          pill='Features'
+          subheading='Capture your ideas, thoughts, and meeting notes in a single place. Organize them by project, team, or client.'
+        />
+        <div
+          className='mt-10
+        max-w-[450px]
+        flex
+        justify-center
+        items-center
+        relative
+        sm:ml-0
+        rounded-2xl
+        border-8
+        border-washed-purple-400
+        border-opacity-10'
+        >
+          <Image src={Calendar} className='rounded-2xl' alt='Calendar' />
+        </div>
       </section>
     </>
   );
